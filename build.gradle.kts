@@ -17,6 +17,8 @@ repositories {
     maven("https://oss.sonatype.org/content/groups/public/") {
         name = "sonatype"
     }
+    maven("https://repo.codemc.io/repository/maven-releases/")
+    maven("https://repo.codemc.io/repository/maven-snapshots/")
 }
 
 dependencies {
@@ -27,6 +29,8 @@ dependencies {
     implementation("org.incendo:cloud-kotlin-extensions:2.0.0-SNAPSHOT")
     implementation("org.incendo:cloud-kotlin-coroutines:2.0.0-SNAPSHOT")
     implementation("org.incendo:cloud-kotlin-coroutines-annotations:2.0.0-SNAPSHOT")
+
+    implementation("com.github.retrooper:packetevents-spigot:2.6.0")
 }
 
 val targetJavaVersion = 21
@@ -62,4 +66,7 @@ bukkit {
     authors = listOf("Aroze").sorted()
     apiVersion = "1.20"
     description = "Lesbians :3"
+    commands {
+//        register("msg")
+    }
 }
